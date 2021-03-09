@@ -1,0 +1,31 @@
+public class Solution {
+    public string MergeAlternately(string word1, string word2) {
+        string merged = ""; 
+        
+        int i; 
+        for (i= 0; i< word1.Length; i++)
+        {
+            char current = word1[i];
+            merged += current; 
+            for (int j = i;j<word2.Length; j++)
+            {
+                current = word2[j];
+                merged += current;
+                if ( i == word1.Length - 1)
+                {
+                    continue;
+                }
+                else 
+                    break;
+                    
+            }
+            
+        }
+        return merged; 
+        
+        
+        }
+        
+        }
+
+    

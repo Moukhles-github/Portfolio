@@ -1,0 +1,44 @@
+class Solution {
+      Map<Character, Integer> romanChars = new HashMap<>(){{ //hash map so we can access the values in an easy way
+        put('I', 1);
+        put('V', 5);
+        put('X', 10);
+        put('L', 50);
+        put('C', 100);
+        put('D', 500);
+        put('M', 1000);
+    }};
+    public int romanToInt(String s) {
+        // Check if values are not empty
+        if(s == null || s.length() == 0){
+            return 0;
+        }
+        
+        
+        int total = 0; //to get the total sum of the roman values
+        int n = s.length(); // get the string length
+        
+        for(int i = n -1 ; i >=0; i--) //Decreasing loop so we go from the end to the left so we can check numbers like this IV, IX, XC ...
+        {
+            int curr = romanChars.get(s.charAt(i)); // the index of where we are at the string.
+            if(i == n-1) // we chheck so we dont go out of bounds
+            {
+                total += curr;
+                continue; 
+            }
+            
+            int prev = romanChars.get(s.charAt(i+1)); // get the previous value so we can see if we sum or add the values. 
+            
+            if (prev > curr) // I(current) V (previous)
+            {
+                total-=curr;
+            }
+            else
+            {
+                total+=curr; 
+            }  
+        }
+    return total;
+    }
+    
+}
