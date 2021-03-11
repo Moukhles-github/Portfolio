@@ -1,0 +1,13 @@
+Projects Completed
+	** Inventarium (Project 1). 
+
+Currently Working project 
+	** Tallium (Project 2). ETA (03/16/2021)
+
+Future Project 
+	** Personal Business Portfolio Website using React JS. (Project 3) Starting (03/17/2021) ETA (03/20/2021)
+
+Note: 
+	All of the project are originally created by me. 
+	the Idea is an inspiration but the development is originally done by me. 
+	 
